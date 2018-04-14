@@ -136,7 +136,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{% static 'dist/img/user2-160x160.jpg' %}" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">{{ request.user.get_full_name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -144,11 +144,11 @@
                 <img src="{% static 'dist/img/user2-160x160.jpg' %}" class="img-circle" alt="User Image">
 
                 <p>
-                  Nome do Usuário Aqui
-                  <small>Último login</small>
+                  {{ request.user.get_full_name }}
+                  <small>{{ request.user.last_login }}</small>
                 </p>
               </li>
-              <!-- Menu Body -->
+              <!-- Menu Body
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
@@ -161,15 +161,15 @@
                     <a href="#">Friends</a>
                   </div>
                 </div>
-                <!-- /.row -->
-              </li>
+              </li> -->
+
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="{% url 'security:logout' %}" class="btn btn-default btn-flat">Sair</a>
                 </div>
               </li>
             </ul>
