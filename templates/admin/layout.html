@@ -86,10 +86,7 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-          <li class="header">NAVEGADOR</li>
-          {% block navegador %}
-
-          {% endblock navegador %}
+          {% block navegador %}{% endblock navegador %}
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -131,5 +128,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{% static 'dist/js/demo.js' %}"></script>
 {% block static_file_botton %}{% endblock static_file_botton %}
+<script src="{% static 'dist/js/shared.js' %}"></script>
 </body>
 </html>
