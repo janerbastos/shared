@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Universidade Federal do Oeste do Pará</title>
+    <link rel="shortcut icon" href="{% static 'static/img/icone.png' %}" type="image/x-icon"/>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      #default{
+        min-height: 100%;
+        width: 100%
+      }    
+      #header{
+        color:#2F71AB;
+        background: #fcfcfc;
+        border-bottom: 1px solid #ddd;
+      }
+      .redes-sociais, .logo{
+        font-size: 22px;
+        padding: 10px 0px;
+      }
+      #conteudo{
+        margin: 11% auto;
+        color: #2F71AB;
+      } 
+      #conteudo h2{
+        font-size: 5em;
+      }     
+      h2 small{
+        color: #2F71AB !important;
+      }
+      .redes{
+        position: absolute;
+        bottom: 80px;
+      }
+      .contatos{
+         color: #fff;
+         font-size: 12px;
+      }
+      .contatos ul{
+        list-style: none;
+        line-height: 2;
+      }
+      #rodape{
+        background: #2F71AB;
+        color: #fff;
+        padding: 16px 0px;
+        font-size: 12px;
+        position: absolute;
+        bottom: 0;
+        margin-left: -15px;
+      }
+      #rodape a{
+        color: #fff999;
+      }
+      @media (max-width: 768px) {
+        #conteudo h2 {
+          font-size: 2em;
+        }
+        .contatos ul {
+          margin: 15px 0 0;
+        }
+      }
+    </style>
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="default" class="container">
+      <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+      <div id="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-4 col-sm-6 logo">
+              <img src="img/icone.png" title="Universidade Federal do Oeste do Pará" alt="Universidade Federal do Oeste do Pará">
+            </div>
+            <div class="col-xs-8 col-sm-6 text-right redes-sociais"> 
+              <a target="_blank" href="https://www.facebook.com/ufopa?fref=nf" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a target="_blank" href="https://twitter.com/ufopa" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a target="_blank" href="https://www.youtube.com/user/comunicaufopa" title="Youtube"><i class="fa fa-youtube"></i></a>
+             <a target="_blank" href="https://www.flickr.com/photos/132566521@N05/" title="Flickr"><i class="fa fa-flickr"></i></a>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <div id='conteudo' class="container">
+          <div class="col-sm-12 text-center">
+            <h2>500<br/><small>Opa! Algo deu errado.</small></h2>
+            <p>Trabalharemos em consertar isso imediatamente. Enquanto isso, você pode retornar ao <a href="">início</a>.</p>
+          </div>
+      </div>
+      <div id="rodape" class="col-sm-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-9">
+              Universidade Federal do Oeste do Pará - Ufopa<br/>
+              Reitoria: Rua Vera Paz, s/n (Unidade Tapajós)  Bairro Salé  CEP 68035-110  Telefone (93) 2101-4911  E-Mail reitoria@ufopa.edu.br  Santarém, Pará, Brasil<br/>
+              © Todos os diretos reservados. Desenvolvido por <a href="http://www.ufopa.edu.br/ctic" target="_blank">UFOPA/CTIC</a>
+            </div>
+            <div class="col-sm-3 contatos">
+              <ul class="text-right">
+                <li><i class="fa fa-phone"></i> (93) 2101-4911</li>
+                <li><i class="fa fa-envelope"></i> reitoria@ufopa.edu.br</li>
+              </ul> 
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </body>
+</html>
